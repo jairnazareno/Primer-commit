@@ -28,7 +28,7 @@ namespace PrimerosPasos
             total = sueldo - egreso;
             Console.WriteLine("El liquido a recibir es: {0} ", total);
 
-            
+
 
             //tipo de dato: flotante de doble presicion
             double x1 = 200.5679;
@@ -38,12 +38,12 @@ namespace PrimerosPasos
             String nombre;
             Console.WriteLine("Ingresa tu nombre");
             nombre = Console.ReadLine();
-            Console.WriteLine("Hola " +nombre+ ", Bienvenidos al curso de Programacion");
+            Console.WriteLine("Hola " + nombre + ", Bienvenidos al curso de Programacion");
 
             //tipo de dato boleano(tipo logico: verdadero/falso) (true/flase)
             bool sw;
 
-            sw = (a+50) > b;
+            sw = (a + 50) > b;
 
             Console.WriteLine("El valor del booleano sw: {0}", sw);
 
@@ -58,20 +58,28 @@ namespace PrimerosPasos
 
             Console.WriteLine();
             Console.WriteLine("Llamada a funcion que devuelve valor");
-            Console.WriteLine("Liquido a recibir para Juan{0}", calcularSueldo(300,200));
+            Console.WriteLine("Liquido a recibir para Juan{0}", calcularSueldo(300, 200));
             Console.WriteLine("Liquido a recibir para Carlos{0}", calcularSueldo(300, 200));
             Console.WriteLine("Liquido a recibir para Lesli{0}", calcularSueldo(300, 200));
 
+            Console.WriteLine();
+            Console.WriteLine("   *  ", figura());
+            Console.WriteLine("  *** ", figura());
+            Console.WriteLine(" ****** ", figura());
+            Console.WriteLine("********  ", figura());
+
+            Console.WriteLine("Ingrese el numero: {0} total es: {1}", (2),total );
+            
             Console.ReadKey();
         }//fin del main
-        //funciones: subprocesos - subprogramas - subrutinas
-        //dividir el codigo en modulos 
-        //reutilizar el codigo
-        //tipo: devuelven valores - no devuelve valores
+         //funciones: subprocesos - subprogramas - subrutinas
+         //dividir el codigo en modulos 
+         //reutilizar el codigo
+         //tipo: devuelven valores - no devuelve valores
 
-         static void saludos(string nombre) //parametro - 
+        static void saludos(string nombre) //parametro - 
         {
-            
+
             Console.WriteLine("Funcion que no devuelve valores...");
             Console.WriteLine("Hola {0}", nombre);
         }
@@ -81,7 +89,22 @@ namespace PrimerosPasos
         static int calcularSueldo(int ingreso, int egreso)
         {
 
-            return (ingreso-egreso);
+            return (ingreso - egreso);
+        }
+        //crear la funcion que imprima la siguiente figura
+        //    *
+        //   ***
+        //  *****
+        // *******
+        static int figura()
+        {
+            return 0;
+
+        }
+        static int cuadrado(int n1,int total)
+        {
+            total = n1 * n1;
+            return (total);
         }
      }
 }
