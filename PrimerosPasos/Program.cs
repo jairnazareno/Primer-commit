@@ -68,8 +68,11 @@ namespace PrimerosPasos
             Console.WriteLine(" ****** ", figura());
             Console.WriteLine("********  ", figura());
 
-            Console.WriteLine("Ingrese el numero: {0} total es: {1}", (2),total );
-            
+            Console.WriteLine("El doble es :{0}"  , cuadrado(10) );
+
+            bateria();
+
+            Multiplicar();
             Console.ReadKey();
         }//fin del main
          //funciones: subprocesos - subprogramas - subrutinas
@@ -91,20 +94,45 @@ namespace PrimerosPasos
 
             return (ingreso - egreso);
         }
-        //crear la funcion que imprima la siguiente figura
-        //    *
-        //   ***
-        //  *****
-        // *******
+        //DEBER
         static int figura()
         {
             return 0;
 
         }
-        static int cuadrado(int n1,int total)
+        static int cuadrado(int n1)
         {
-            total = n1 * n1;
-            return (total);
+            
+            return (n1 * n1);
         }
-     }
+        static void bateria()
+        {
+            int porcentaje;
+            Console.WriteLine("Ingrese el porcentaje de su bateria");
+            porcentaje = int.Parse(Console.ReadLine());
+
+            if (porcentaje > 15)
+                Console.WriteLine("Su bateria esta en buen estado ");
+            else
+                Console.WriteLine("Su bateria necesita carga o dejara de funcionar");
+            
+           
+        }
+        
+        static void Multiplicar()
+        {
+            int n;
+            string linea;
+            Console.Write("Ingrese multiplicador: ");
+            linea = Console.ReadLine();
+            n = int.Parse(linea);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.Write(i + " x " + n + " = " + i * n + "\n");
+            }
+            Console.ReadKey();
+        }
+            
+    }
 }
+
